@@ -1,0 +1,3 @@
+* ChatScript Documentation
+
+This is an attempt to make some semblance of usable documentation for [[https://sourceforge.net/projects/chatscript/][ChatScript]], an awesome language for creating your very own conversational chatbot.
