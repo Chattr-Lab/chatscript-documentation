@@ -89,7 +89,7 @@ different ways can you say "Hello?"  Let's name a few:
 - Hola
 
 and the list goes on.  What if I want to recognize when my users are saying
-"Hello" so I can say hello back? Enter ChatScript concepts. Enter =~emohello=
+"Hello" so I can say hello back? That's what ChatScript concepts are for. Enter =~emohello=
 into your pattern match, and you'll instantly match all of those possible greetings.
 
 So how can you find out what concepts are available?  The best way to start is
