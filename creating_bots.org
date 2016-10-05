@@ -11,8 +11,9 @@
   - Rename the copy to ~files<Name>.txt~ to match the name of your folder
   - Open ~files<Name>.txt~ and change the 2nd line to be ~RAWDATA/<NAME>/~
 - Download and install Atom: https://atom.io/
-- Install Chatscript Syntax highlighting
-  - Open File --> Settings, go to Install
+- Install Chatscript Syntax highlighting in Atom
+  - Open the Atom text editor on your computer
+  - Open File --> Settings, go to the Install menu
   - Type "language-chatscript" and press Enter
   - Click Install on the ~language-chatscript~ package
 - Open your project
@@ -23,6 +24,11 @@
   - Change ~HARRY~ on line 9 to say ~<NAME>~
   - Press ~CTRL-S~ to save ~simplecontrol.top~
 * Exploring ChatScript
+** Interacting with the basic bot
+- Before we look at any code, let's take a look at a bot in action.  On Windows,
+  you can interact with the bots you build just by going to ~<ChatScript
+  folder>\\BINARIES\\~ and double-clicking on ~chatscript.exe~
+** Exploring the code
 - In Atom's left sidebar, open ~childhood.top~
   - This is a very simple topic file to demonstrate how you can begin to give
     your bot conversational abilities
@@ -38,6 +44,8 @@ TOPIC: ~childhood (child childhood kid little memory young younger history "run 
   - ~\~childhood~ is a name for the topic so you can identify any issues during debugging
   - ~(child childhood ...)~ are the trigger terms that will be used to initiate
     conversation in this topic
+- Now let's take a look at some more advanced topics.  We won't be building on
+  any of these in this tutorial, but you should know that they are there.
 - Create the start of your own new TOPIC file
   - Right-click on the ~<NAME>~ folder on the sidebar of Atom
   - Select New File and enter a name for the file.  We'll go with ~robot.top~
@@ -50,6 +58,8 @@ TOPIC: ~robot (robot bot hal)
 * ChatScript ideas
 ** Concepts
 * ChatScript Interactive Commands
-- ~:reset~ Starts your conversation over again
+- ~:reset~ Starts your conversation over again, removing any history of previous
+  conversation
+- ~:build <Name>~ Builds a bot based on the contents of ~files<Name>.txt~
 - ~:concepts <word>~ Shows you what concepts contain the ~<word>~ you enter
 - ~:down \~concept~ Shows what words are contained within the given ~\~concept~
