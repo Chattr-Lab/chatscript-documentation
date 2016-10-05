@@ -31,3 +31,25 @@
 #+BEGIN_SRC
 TOPIC: ~childhood (child childhood kid little memory young younger history "run away")
 #+END_SRC
+
+- Let's break that down:
+  - ~TOPIC:~ tells ChatScript that this is a topic file. Topics are the way
+    ChatScript organizes topics of conversation
+  - ~\~childhood~ is a name for the topic so you can identify any issues during debugging
+  - ~(child childhood ...)~ are the trigger terms that will be used to initiate
+    conversation in this topic
+- Create the start of your own new TOPIC file
+  - Right-click on the ~<NAME>~ folder on the sidebar of Atom
+  - Select New File and enter a name for the file.  We'll go with ~robot.top~
+  - Enter the following on the top line of your new ~robot.top~ file:
+
+#+BEGIN_SRC
+TOPIC: ~robot (robot bot hal)
+#+END_SRC
+
+* ChatScript ideas
+** Concepts
+* ChatScript Interactive Commands
+- ~:reset~ Starts your conversation over again
+- ~:concepts <word>~ Shows you what concepts contain the ~<word>~ you enter
+- ~:down \~concept~ Shows what words are contained within the given ~\~concept~
