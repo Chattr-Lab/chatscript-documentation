@@ -28,6 +28,19 @@
 - Before we look at any code, let's take a look at a bot in action.  On Windows,
   you can interact with the bots you build just by going to ~<ChatScript
   folder>\BINARIES\~ and double-clicking on ~chatscript.exe~
+- The first thing you'll do is enter your name. After that, you're interacting
+  directly with the basic bot included with ChatScript.
+- The basic bot will carry on a basic conversation, including a couple smalltalk
+  items and some questions about running away from home. In the next section
+  we'll take a look at the code, but for now just check it out.
+- The bot also includes a couple commands to interact with Wikipedia:
+  - If you ask the bot: "What is a <word>", it will attempt to find the answer
+    for you.  Example: "~What is a banana?~". These response don't always work,
+    because sometimes Wikipedia doesn't present the information in a way the bot
+    can understand.  If your query doesn't work, try a new one.
+  - You can also ask about people. Example: "~Who is Kanye West?~"
+- You can also tell the bot to say something with the "say" command, and it will
+  repeat your message back to you.  Example: "~Say I am a robot~"
 ** Exploring the code
 - In Atom's left sidebar, open ~childhood.top~
   - This is a very simple topic file to demonstrate how you can begin to give
