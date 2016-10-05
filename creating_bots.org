@@ -70,6 +70,39 @@ TOPIC: ~robot (robot bot hal)
 
 * ChatScript ideas
 ** Concepts
+Concepts are ChatScripts built-in way of organizing words based on their
+semantic meaning.  This is extremely helpful when you're making a bot, because
+it allows you to combine a variety of possible user messages into a single
+entry.  For example, we have the concept of =~pet_animals= that contains
+references to just about every animal that can be kept as a pet, whether it's a
+bird, cat, ferret, or spider.  If you want to talk about pets, or recognize when
+your chat partner is talking about pets, you can just insert the concept of
+=~pet_animals= into your pattern matching.
+
+Another great example of why concepts are awesome: greetings.  How many
+different ways can you say "Hello?"  Let's name a few:
+
+- Hi
+- Hello
+- Howdy
+- Nice to see you
+- Hola
+
+and the list goes on.  What if I want to recognize when my users are saying
+"Hello" so I can say hello back? Enter ChatScript concepts. Enter =~emohello=
+into your pattern match, and you'll instantly match all of those possible greetings.
+
+So how can you find out what concepts are available?  The best way to start is
+by opening ChatScript and using the ~:concepts~ command. For example, if I
+wanted to see what concepts are related to "hello", I would enter ~:concepts
+hello~ when talking to the bot.  ChatScript will respond with a list of concepts
+that would match if you typed the word "hello" into a chat message.
+
+Once you have a concept, it would be nice if we could check out what words or
+phrases would match it. That's where the ~:down~ command comes in.  Just enter
+=:down ~emohello= to see what words and phrases are a part of the =~emohello=
+concept.
+
 * ChatScript Interactive Commands
 - ~:reset~ Starts your conversation over again, removing any history of previous
   conversation
