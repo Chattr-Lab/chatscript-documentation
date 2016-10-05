@@ -1,0 +1,33 @@
+#+TITLE: Getting Started with ChatScript
+* Setting up
+- Download and extract Chatscript: https://sourceforge.net/projects/chatscript/
+- Create your bot
+  - Decide on the name of your bot
+  - Open the ChatScript folder in Explorer
+  - Go to the ~RAWDATA~ folder
+  - Copy and paste the ~HARRY~ folder
+  - Rename the copy to be whatever you want your bot's name to be
+  - Copy and paste the ~filesHarry.txt~ file
+  - Rename the copy to ~files<Name>.txt~ to match the name of your folder
+  - Open ~files<Name>.txt~ and change the 2nd line to be ~RAWDATA/<NAME>/~
+- Download and install Atom: https://atom.io/
+- Install Chatscript Syntax highlighting
+  - Open File --> Settings, go to Install
+  - Type "language-chatscript" and press Enter
+  - Click Install on the ~language-chatscript~ package
+- Open your project
+  - File --> Open Folder...
+  - Find the folder you created for your bot and open it
+- Rename the bot in ChatScript
+  - Open ~simplecontrol.top~
+  - Change ~HARRY~ on line 9 to say ~<NAME>~
+  - Press ~CTRL-S~ to save ~simplecontrol.top~
+* Exploring ChatScript
+- In Atom's left sidebar, open ~childhood.top~
+  - This is a very simple topic file to demonstrate how you can begin to give
+    your bot conversational abilities
+  - Note the top line:
+
+#+BEGIN_SRC
+TOPIC: ~childhood (child childhood kid little memory young younger history "run away")
+#+END_SRC
