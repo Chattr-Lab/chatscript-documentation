@@ -27,7 +27,7 @@
 ** Interacting with the basic bot
 - Before we look at any code, let's take a look at a bot in action.  On Windows,
   you can interact with the bots you build just by going to ~<ChatScript
-  folder>\\BINARIES\\~ and double-clicking on ~chatscript.exe~
+  folder>\BINARIES\~ and double-clicking on ~chatscript.exe~
 ** Exploring the code
 - In Atom's left sidebar, open ~childhood.top~
   - This is a very simple topic file to demonstrate how you can begin to give
@@ -41,7 +41,7 @@ TOPIC: ~childhood (child childhood kid little memory young younger history "run 
 - Let's break that down:
   - ~TOPIC:~ tells ChatScript that this is a topic file. Topics are the way
     ChatScript organizes topics of conversation
-  - ~\~childhood~ is a name for the topic so you can identify any issues during debugging
+  - =~childhood= is a name for the topic so you can identify any issues during debugging
   - ~(child childhood ...)~ are the trigger terms that will be used to initiate
     conversation in this topic
 - Now let's take a look at some more advanced topics.  We won't be building on
@@ -62,4 +62,4 @@ TOPIC: ~robot (robot bot hal)
   conversation
 - ~:build <Name>~ Builds a bot based on the contents of ~files<Name>.txt~
 - ~:concepts <word>~ Shows you what concepts contain the ~<word>~ you enter
-- ~:down \~concept~ Shows what words are contained within the given ~\~concept~
+- =:down ~concept= Shows what words are contained within the given =~concept=
