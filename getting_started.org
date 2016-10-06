@@ -104,6 +104,7 @@ TOPIC: ~robot (robot bot hal)
 * ChatScript ideas
 ** Concepts
 <<sec:concepts>>
+
 Concepts are ChatScripts built-in way of organizing words based on their
 semantic meaning.  This is extremely helpful when you're making a bot, because
 it allows you to combine a variety of possible user messages into a single
