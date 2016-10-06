@@ -45,6 +45,7 @@
 - In Atom's left sidebar, open ~childhood.top~
   - This is a very simple topic file to demonstrate how you can begin to give
     your bot conversational abilities
+*** Topic Files
   - Note the top line:
 
 #+BEGIN_SRC
@@ -63,6 +64,7 @@ TOPIC: ~childhood (child childhood kid little memory young younger history "run 
 - Below the ~TOPIC~ line are a couple lines of comments. These lines begin with
   a ~#~, and are used to tell you things about the code, but don't actually /do/
   anything in the program.
+*** Gambits
 - On line 6 we see our first question from the bot. The code for that is shown
   here:
 
@@ -86,8 +88,47 @@ t: Did you run away from home when you were little?
   - It is also possible to go even deeper. Under each ~a:~, you might put a
     couple different ~b:~ tags to respond to those. You can see an example of
     that on lines 40-46.
-*** TODO explain naming gambits for reuse
+*** Naming gambits
+- On line 14 we can see a gambit, but it's a little different from the ones we've seen before:
+
+#+BEGIN_SRC
+t: RUNAWAY ( ) I ran away once, but my parents found me and dragged me back. 
+#+END_SRC
+
+- This gambit has been given a name: ~RUNAWAY~. 
+  Names are not required, but they can be included if you want to refer to a gambit later on
+- For example, if you look at line 53, you'll see a reference to our ~RUNAWAY~
+  gambit.  If the user says anything about running away, the bot will respond
+  with this the gambit labled ~RUNAWAY~, and you tell ChatScript to do that with
+  ~^reuse ( RUNAWAY )~
 *** TODO Explain ~u:~ vs. ~t:~ vs. ~r:~ (others?)
+So far, all of our gambits have used the ~t:~ label. The ~t~ gambits are used
+sequentially, meaning the bot will start at the top of the file and work its way
+down, using each one in turn. There are a couple different types of gambit to
+choose from:
+
+- ~t:~ - Used sequentially. The bot will start at the top of the file and work
+  its way down. 
+- ~r:~ - Used in random order. Rather than starting at the top, the bot will
+  select one of the random gambits and send it out.
+- ~u:~ - Responses to user messages.  You can see some examples of this starting
+  with line 50 in ~childhood.top~.  These have a slightly different format than
+  the ~r:~ or ~t:~ gambits
+
+Let's look at line 56:
+
+#+BEGIN_SRC
+u: HAPPY ( how * childhood ) I was happy as a kid. 
+#+END_SRC
+
+- Let's break it down:
+  - ~u:~ indicates that this is a response to a user
+  - ~HAPPY~ is a label, just like ~RUNAWAY~ that we already talked about
+  - ~( how * childhood )~ is the user message we're matching. We'll talk more
+    about that in a second
+  - ~I was happy as a kid.~ is the bot's response.
+
+
 *** TODO Explain multi-word phrases like run_away
 *** TODO Explain wildcard matching with how * childhood
 *** TODO explain option matching with []
@@ -96,8 +137,6 @@ t: Did you run away from home when you were little?
 ** Exploring the code - advanced
 Now let's take a look at some more advanced topics. We won't be building on any
 of these in this tutorial, but you should know that they are there.
- 
-
 * Creating your bot
 - Create the start of your own new TOPIC file
   - Right-click on the ~<NAME>~ folder on the sidebar of Atom
