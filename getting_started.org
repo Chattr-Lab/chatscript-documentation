@@ -79,7 +79,7 @@ t: Did you run away from home when you were little?
   gambit, you can create some different options for how users might respond.
   When the bot asks "Did you run away," it has two different possible responses
   from users: yes and no. The =~= before yes and no indicates a ChatScript
-  concept.  For more on concepts see the [[sec:concepts][Concepts]] section below.
+  concept.  For more on concepts see the [[#sec:concepts][Concepts]] section below.
   - ChatScript will only use 1 of the possible responses, but you can list as
     many as you want. Here we have responses for "yes" and "no," but no response
     if the user responds with "Why do you ask?"
