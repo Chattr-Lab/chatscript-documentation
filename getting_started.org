@@ -111,6 +111,8 @@ choose from:
   its way down. 
 - ~r:~ - Used in random order. Rather than starting at the top, the bot will
   select one of the random gambits and send it out.
+- ~?:~ - Responds to a user question. Will only trigger if the user asks a
+  question
 - ~u:~ - Responses to user messages.  You can see some examples of this starting
   with line 50 in ~childhood.top~.  These have a slightly different format than
   the ~r:~ or ~t:~ gambits
@@ -148,7 +150,8 @@ the gambit label. Let's break some of those down:
   trigger the same response. Here, if the user says either "dream" or
   "nightmare," the bot response on line 40 will trigger.
 - Line 53: ~( run_away )~. This is phrase matching.  You can include more than
-  one word together with _ to make sure the exact phrase matches
+  one word together with _ to make sure the exact phrase matches. This will only
+  work for common phrases that ChatScript has already defined.
 - Line 56: ~( how * childhood )~. This match includes a wildcard.  The * is used
   to match any number of words.  So the user could say "how was childhood for
   you" or "how was your childhood" or "how was your time in your childhood" and
@@ -159,11 +162,31 @@ the gambit label. Let's break some of those down:
   the exact order we've put them in. Here, with the ~<<>>~ symbols, we can say
   that order doesn't matter. So we can have "Do you have any early memories?" or
   "Do you have any memory of your childhood?"  Any order of the words inside the
-  ~<<>>~ will match the pattern
-*** TODO Explain stemming and verb form changes
+  ~<<>>~ will match the pattern.
+
+At this point you have all the basics you need to begin building your own topic
+files.  Be sure to include a mix of ~t:~ and ~u:~ gambits so that you can be
+responsive to the things your chat partner says.
+*** User message matching - advanced
+There are a couple other valuable topics to make creating your bot a little
+easier.  A lot of these come from linguistics, but they're pretty easy to
+understand.  
+
+
+
 ** Exploring the code - advanced
 Now let's take a look at some more advanced topics. We won't be building on any
-of these in this tutorial, but you should know that they are there.
+of these in this tutorial, but you should know that they are there
+*** Wikipedia search
+*** Quibbles
+*** Variable matching
+~_~ and ~_0~
+*** Gambit attributes
+~keep()~
+*** Topic attributes
+~nostay()~
+
+~repeat()~
 * Creating your bot
 - Create the start of your own new TOPIC file
   - Right-click on the ~<NAME>~ folder on the sidebar of Atom
