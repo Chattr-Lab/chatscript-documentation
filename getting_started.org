@@ -101,7 +101,7 @@ t: RUNAWAY ( ) I ran away once, but my parents found me and dragged me back.
   gambit.  If the user says anything about running away, the bot will respond
   with this the gambit labled ~RUNAWAY~, and you tell ChatScript to do that with
   ~^reuse ( RUNAWAY )~
-*** TODO Explain ~u:~ vs. ~t:~ vs. ~r:~ (others?)
+*** Different types of gambit
 So far, all of our gambits have used the ~t:~ label. The ~t~ gambits are used
 sequentially, meaning the bot will start at the top of the file and work its way
 down, using each one in turn. There are a couple different types of gambit to
@@ -121,18 +121,45 @@ Let's look at line 56:
 u: HAPPY ( how * childhood ) I was happy as a kid. 
 #+END_SRC
 
-- Let's break it down:
-  - ~u:~ indicates that this is a response to a user
-  - ~HAPPY~ is a label, just like ~RUNAWAY~ that we already talked about
-  - ~( how * childhood )~ is the user message we're matching. We'll talk more
-    about that in a second
-  - ~I was happy as a kid.~ is the bot's response.
+Let's break it down:
 
+- ~u:~ indicates that this is a response to a user
+- ~HAPPY~ is a label, just like ~RUNAWAY~ that we already talked about
+- ~( how * childhood )~ is the user message we're matching. We'll talk more
+  about that in the next section
+- ~I was happy as a kid.~ is the bot's response
 
-*** TODO Explain multi-word phrases like run_away
-*** TODO Explain wildcard matching with how * childhood
-*** TODO explain option matching with []
-*** TODO Explain out of order matching with <<>>
+The biggest new thing here is the user message matching.  It looks just like the
+matching for =~yes= and =~no= from the ~a:~ message up above.  To understand a
+bit more about how to match, check out the next section.
+*** User message matching - basics
+We can see how pattern matching works in a whole bunch of ways in
+~childhood.top~.  The matching pattern is put into parentheses ~()~ right after
+the gambit label. Let's break some of those down:
+
+- Line 34: ~( snake )~. This is the most basic matching. If the user says
+  "snake" or "snakes" at that point in the conversation, this pattern will match
+  and the appropriate response will be triggered.
+- Line 22: =( ~food )=. This is a concept. We've already talked about concept
+  matching. If the user says anything from the food category, this pattern will
+  match.
+- Line 40: ~( [ dream nightmare ] )~. This is option matching. By placing terms
+  inside brackets ~[]~ we can include multiple options for a user message and
+  trigger the same response. Here, if the user says either "dream" or
+  "nightmare," the bot response on line 40 will trigger.
+- Line 53: ~( run_away )~. This is phrase matching.  You can include more than
+  one word together with _ to make sure the exact phrase matches
+- Line 56: ~( how * childhood )~. This match includes a wildcard.  The * is used
+  to match any number of words.  So the user could say "how was childhood for
+  you" or "how was your childhood" or "how was your time in your childhood" and
+  each of those would match with line 56.
+- Line 65: ~( << you [ early childhood ] memory >> )~.  This is the biggest one
+  yet, and it combines what we've already talked about--options matching--with a
+  new idea: ordering.  Up until now, the patterns we've used will only match in
+  the exact order we've put them in. Here, with the ~<<>>~ symbols, we can say
+  that order doesn't matter. So we can have "Do you have any early memories?" or
+  "Do you have any memory of your childhood?"  Any order of the words inside the
+  ~<<>>~ will match the pattern
 *** TODO Explain stemming and verb form changes
 ** Exploring the code - advanced
 Now let's take a look at some more advanced topics. We won't be building on any
