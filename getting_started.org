@@ -86,6 +86,13 @@ t: Did you run away from home when you were little?
   - It is also possible to go even deeper. Under each ~a:~, you might put a
     couple different ~b:~ tags to respond to those. You can see an example of
     that on lines 40-46.
+*** TODO explain naming gambits for reuse
+*** TODO Explain ~u:~ vs. ~t:~ vs. ~r:~ (others?)
+*** TODO Explain multi-word phrases like run_away
+*** TODO Explain wildcard matching with how * childhood
+*** TODO explain option matching with []
+*** TODO Explain out of order matching with <<>>
+*** TODO Explain stemming and verb form changes
 ** Exploring the code - advanced
 Now let's take a look at some more advanced topics. We won't be building on any
 of these in this tutorial, but you should know that they are there.
