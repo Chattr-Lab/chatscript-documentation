@@ -1,6 +1,6 @@
 #+TITLE: Getting Started with ChatScript
 * Setting up
-- Download and extract Chatscript: https://sourceforge.net/projects/chatscript/
+- Download and extract Chatscript: https://github.com/ChatScript/ChatScript
 - Create your bot
   - Decide on the name of your bot
   - Open the ChatScript folder in Explorer
