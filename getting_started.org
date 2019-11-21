@@ -10,12 +10,8 @@
   - Copy and paste the ~filesHarry.txt~ file
   - Rename the copy to ~files<Name>.txt~ to match the name of your folder
   - Open ~files<Name>.txt~ and change the 2nd line to be ~RAWDATA/<NAME>/~
-- Download and install Atom: https://atom.io/
-- Install Chatscript Syntax highlighting in Atom
-  - Open the Atom text editor on your computer
-  - Open File --> Settings, go to the Install menu
-  - Type "language-chatscript" and press Enter
-  - Click Install on the ~language-chatscript~ package
+- Download and install VS Code: 
+- Install the chatscript-language extension for VS Code
 - Open your project
   - File --> Open Folder...
   - Find the folder you created for your bot and open it
